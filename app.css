@@ -79,7 +79,7 @@ a{
     text-align: center;
     color: var(--color_texto);
     margin: 50px 0;
-    font-size: 45px;
+    font-size: 33px;
 }
 
 .contenedor{
@@ -90,12 +90,16 @@ a{
   
 }
 
+.contenedor_azul{
+    background-color: rgb(19, 117, 170);
+}
+
 .contenedor_informacion{
     color: var(--color_texto);
     background-color: var(--color-secundario);
     padding: 40px 30px;
     border-radius: 20px;
-    width: 80%;
+    width: 70%;
     text-align: justify;
     display: flex;
     flex-direction: column;
@@ -221,24 +225,28 @@ a{
 .titulo{
     text-align: center;
     font-weight: 800;
-    font-size: 35px;
+    font-size: 30px;
     margin: 30px 0;
 
 }
 
 .subtitulo{
-    font-weight: 800;
-    font-size: 26px;
+    font-weight: 700;
+    font-size: 24px;
 
 }
 
 .parrafo{
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 19px;
+    line-height: 28px;
 }
 
 .contenedor_imagen{
     text-align: center;
+}
+
+.contenedor_informacion_img_80{
+    width: 80%;
 }
 
 .contenedor_imagen1{
@@ -287,6 +295,7 @@ a{
     grid-template-columns: repeat(2,1fr);
     gap: 50px;
     padding: 0px 150px;
+    
 }
 
 .nombre_integrante_scrum{
@@ -314,6 +323,7 @@ a{
 -webkit-box-shadow: 1px 4px 20px 2px rgba(0,0,0,0.87);
 -moz-box-shadow: 1px 4px 20px 2px rgba(0,0,0,0.87);
 height: 260px;
+
 
 }
 
@@ -396,9 +406,7 @@ height: 260px;
     border-radius: 50%;
 }
 
-.titulo_blog{
-    font-size: 32px;
-}
+
 
 .parrafo{
         font-size: 18px;
