@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="logo_pata.png">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Orejitas y colitas</title>
+</head>
+
+<style>
+    body::-webkit-scrollbar {
+        background-color: white;
+        width: 7px;
+    }
+
+    body::-webkit-scrollbar-thumb {
+        background-color: #ff9d00;
+        border-radius: 5px;
+    }
+
+    body {
+        background-color: var(--color-primario);
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--color_texto);
+    }
+
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--color-secundario);
+        color: white;
+        padding: 20px 120px;
+        transition: all 500ms;
+
+    }
+
+    .header_enlaces {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0 30px;
+    }
+
+    .header_titulo {
+        text-transform: uppercase;
+        font-size: 30px;
+        font-weight: 700;
+    }
+
+    .header_enlace {
+        color: white;
+        font-size: 25px;
+    }
+
+
+    .header_enlace_modoOscuro {
+        color: rgb(255, 227, 86);
+
+    }
+
+    .titulo_blog {
+        text-align: center;
+        color: white;
+        margin: 50px 0;
+        font-size: 45px;
+    }
+
+    .contenedor {
+        display: flex;
+        justify-content: center;
+        justify-content: space-between;
+        gap: 0 60px;
+
+    }
+
+    .contenedor_informacion {
+        color: var(--color_texto);
+        background-color: var(--color-secundario);
+        padding: 40px 30px;
+        border-radius: 20px;
+        width: 60%;
+        text-align: justify;
+        display: flex;
+        flex-direction: column;
+        gap: 40px 0;
+        line-height: 25px;
+        margin-right: 100px;
+    }
+
+    .contenedor_informacion_img {
+        width: 100%;
+    }
+
+    .contenedor_archivos {
+        color: var(--color_texto);
+        background-color: var(--color-secundario);
+        padding: 40px 30px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: fit-content;
+    }
+
+    .footer {
+        background-color: var(--color-secundario);
+        padding: 30px 0;
+        color: white;
+        text-align: center;
+        margin-top: 400px;
+        font-weight: 400;
+        font-size: 20px;
+    }
+
+    .navegacion_scroll {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        background: rgba(0, 0, 0, .5);
+        backdrop-filter: blur(20px);
+        box-sizing: border-box;
+        z-index: 10;
+    }
+
+    .negrita {
+        font-weight: bold;
+        font-size: 20px;
+        color: white;
+
+    }
+
+    .negrita_baja {
+        font-weight: bold;
+        font-size: 16px;
+        color: white;
+    }
+
+    .circulo {
+        font-size: 8px;
+    }
+
+    .seccion_principal a {
+        color: white;
+        text-decoration: none;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        padding: 20px 30px;
+        text-transform: uppercase;
+        font-size: 15px;
+        font-weight: 600;
+        transition: all 500ms;
+    }
+
+    .seccion_principal a:hover {
+        background-color: #131417;
+    }
+
+    .seccion_principal {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        width: 100%;
+        border: #131417 solid 1px;
+        background-color: #252830;
+    }
+
+    .barra_secciones {
+
+        background-color: #252830;
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        border-radius: 10px;
+
+    }
+
+    .barra_secciones a {
+        padding: 20px 30px;
+        transition: all 500ms;
+    }
+
+    .barra_secciones a:hover {
+        background-color: #ff9d00;
+        border-radius: 10px;
+        color: black;
+    }
+
+    .barra_secciones_activo {
+        background-color: #ff9d00;
+        border-radius: 10px;
+        color: black;
+    }
+</style>
+
+<body>
+    <header class="header ">
+        <div>
+            <p class="header_titulo">untels</p>
+        </div>
+        <div class="header_enlaces">
+            <a href="blog.html"><i class="fa-solid fa-house header_enlace"></i></a>
+            <a href="#" class="boton_modoOscuro"><i
+                    class="fa-solid fa-moon header_enlace header_enlace_modoOscuro"></i></a>
+        </div>
+    </header>
+
+    <div class="seccion_principal">
+        <a href="" class="seccion_activa">Inicio</a>
+        <a href="">planificación y estimación</a>
+        <a href="">Implementación</a>
+        <a href="">Lanzamiento</a>
+    </div>
+
+    <h1 class="titulo_blog">2. Nuevo titulo</h1>
+
+    <div class="contenedor">
+        <div class="barra_secciones">
+            <a href="" class="barra_secciones_activo">1. Creación de la visión del proyecto</a>
+            <a href="">2. Identificar al Scrum Master y stakeholder(s)</a>
+            <a href="">3. Formar el Equipo Scrum</a>
+            <a href="">4. Desarrollar épica(s)</a>
+            <a href="">5. Crear el Backlog Priorizado del Producto</a>
+            <a href="">6. Realizar la planificación del lanzamiento</a>
+        </div>
+        <div class="contenedor_informacion">
+            <img class="contenedor_informacion_img" src="images/pexels-cong-h-1404819.jpg" alt="">
+            <p class="negrita">Caso de negocio</p>
+            <p class="contenedor_informacion_info">Actualmente, la veterinaria cuenta con un sistema para el registro de
+                pacientes de manera local ​, cuya base de datos se guarda en la memoria del ordenador,teniendo que
+                generar regularmente un backup con la finalidad de evitar problemas con la capacidad de almacenamiento.
+                Asimismo, se presenta una necesidad de mejora en la administración de los datos, con el requerimiento
+                del uso de internet para optimizar la gestión de toda su información y el almacenamiento en la nube.
+                Es por ello, que este proyecto busca la implementación de un sistema de base de datos conectada a la
+                nube e implementación de una página web con el fin de realizar los distintos registros y manejo de datos
+                de forma más óptima.
+            </p>
+            <p class="negrita">Objetivos</p>
+            <p>- Implementar un sistema de base de datos conectada a la nube.</p>
+            <p>- Implementar una página web con el fin de realizar los distintos registros y manejo de datos de forma
+                más óptima.</p>
+
+            <p class="negrita">Resultados deseados</p>
+            <p>- Optimizar la gestión y manejo de datos e información de la veterinaria, agilizando sus procesos.
+            </p>
+            <p>- Disminución del riesgo de pérdida de información mediante el uso de una base de datos en la nube.</p>
+            <p class="negrita">Análisis FODA</p>
+            <p class="negrita_baja">1. Fortalezas</p>
+            <p>- Mejora en la eficiencia y precisión del registro de pacientes.</p>
+            <p>- Mejora en la calidad de la atención médica veterinaria.
+            </p>
+            <p>- Aumento en la satisfacción y fidelización del cliente.
+            </p>
+            <p>- Mayor capacidad de seguimiento y gestión de la veterinaria.
+            </p>
+            <p>- Generación de nuevos ingresos para el negocio.
+            </p>
+            <p>- Ventaja competitiva frente a otras clínicas veterinarias que no cuentan con un sistema de gestión de
+                pacientes.
+            </p>
+            <p class="negrita_baja">2. Oportunidades</p>
+            <p>- Aumento de la demanda de servicios de atención médica veterinaria.
+            </p>
+            <p>- Incremento de la conciencia sobre la importancia de la salud y el cuidado de las mascotas.
+            </p>
+            <p>- Potencial para expandir el negocio y ofrecer servicios adicionales.
+            </p>
+            <p class="negrita_baja">3. Debilidades</p>
+            <p>- Costo inicial de implementación del sistema de gestión de pacientes.
+            </p>
+            <p>- Necesidad de capacitar al personal para utilizar el nuevo sistema.
+            </p>
+            <p class="negrita_baja">4. Amenazas</p>
+            <p>- Competencia con veterinarias que ya cuentan con sistemas de gestión de pacientes.
+            </p>
+            <p>- Inestabilidad económica o crisis que afecten el mercado de la atención veterinaria.
+            </p>
+            <p>- Cambios en la legislación o regulaciones que puedan afectar la operación del negocio.
+            </p>
+            <p class="negrita">Análisis de brecha
+            </p>
+            <p class="negrita_baja">1. Estado Actual</p>
+            <p>- Registros de pacientes en un sistema con almacenamiento local.
+            </p>
+            <p>- Necesidad de realización de backup regularmente.
+            </p>
+            <p>- Dificultad para acceder a los registros de pacientes cuando es necesario.
+            </p>
+            <p class="negrita_baja">2. Estado Deseado</p>
+            <p>- Un sistema de base de datos almacenado en la nube.
+            </p>
+            <p>- Automatización de la programación de citas y seguimiento de pacientes mediante una página web.
+            </p>
+            <p>- Mejora en la precisión y calidad de los registros de pacientes.
+            </p>
+            <p class="negrita_baja">3. Brechas identificadas</p>
+            <p>- Falta de un sistema de base de datos en la nube.
+            </p>
+            <p>- Sistema local de registro de pacientes no muy óptimo.
+            </p>
+            <p class="negrita_baja">4. Acciones recomendadas</p>
+            <p>- Implementar un sistema de base de datos en la nube que disminuya el riesgo de pérdida de información
+                con respecto a la base de datos local.
+            </p>
+            <p>- Implementar un sistema de gestión de pacientes que integre los registros de pacientes y permita el
+                acceso fácil y rápido a la información mediante una página web.
+            </p>
+            <p>- Capacitar al personal en el uso del nuevo sistema y establecer procedimientos claros para el registro
+                de pacientes.
+            </p>
+            <p class="negrita">Visión de la empresa</p>
+            <p>- Buscar y proporcionar una excelencia en la prevención, detección y curación de enfermedades de las
+                mascotas, brindar una excelente atención, hacerlo de manera sostenible, profesional y ética. </p>
+            <p>- Proporcionar a cada mascota la mayor atención de nuestro personal.</p>
+            <p>- Transmitir una sensación de Familia, mejorando la calidad de vida de nuestros pacientes y sus familias,
+                entendemos que cada mascota es única y deseamos dar una atención médica que satisfaga las expectativas
+                de nuestros clientes.
+            </p>
+            <p class="negrita">Misión de la empresa</p>
+            <p>Promover y ofrecer el bienestar de los animales a través de la excelencia médica, educación y servicio
+                tanto para nuestros clientes como también a la comunidad, entregando calidad y satisfacción,
+                contribuyendo en la innovación y desarrollo tanto ética como profesional.
+                también educar e informar a los propietarios lo mejor que podamos para que puedan tomar decisiones
+                óptimas con relación al bienestar de sus mascotas.
+            </p>
+            <p class="negrita">Product Backlog
+            </p>
+            <p>1. Crear una base de datos para almacenar la información de los pacientes, que incluya su nombre,
+                especie, raza, edad, género, peso, historial médico y propietario en la nube.
+            </p>
+            <p>2. Desarrollar una página web con una interfaz de usuario amigable para registrar la información de los
+                pacientes, programar citas y realizar seguimiento de los tratamientos.
+            </p>
+            <p>3. Desarrollar un módulo para registrar las visitas al veterinario, que incluya la fecha, la hora, el
+                motivo de la visita, el diagnóstico, el tratamiento y los medicamentos recetados.
+            </p>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Todos los derechos reservados - 2023</p>
+    </footer>
+</body>
+<script>
+    const header = document.querySelector('.header');
+
+    window.addEventListener('scroll', function () {
+        const scrollY = window.scrollY;
+        if (scrollY > 0) {
+            header.classList.add('navegacion_scroll')
+            return;
+        }
+        header.classList.remove('navegacion_scroll');
+    })
+</script>
+
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <link rel="stylesheet" href="app.css">
+    <link rel="shortcut icon" href="logo_pata.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orejitas y colitas</title>
+</head>
+
+    
+<body>
+    <header class="header ">
+        <div>
+            <p class="header_titulo">untels</p>
+        </div>
+        <div class="header_enlaces">
+            <a href="blog.html"><i class="fa-solid fa-house header_enlace"></i></a>
+            <a href="#" class="barra_menu"><i class="fa-solid fa-bars icono_menu"></i></a>
+        </div>
+    </header>
+
+    <div class="seccion_principal menu_inactivo">
+        <a href="blog.html">Inicio</a>
+        <a href="">Sprint I</a>
+        <a href="">Sprint II</a>
+        <a href="">Sprint III</a>
+    </div>
+
+    <h1 class="titulo_blog">2. Identificar Scrum Master y stakeholders</h1>
+
+    <div class="contenedor">
+        <div class="barra_secciones">
+            <a href="crear_vision_proyecto.html">1. Creación de la visión del proyecto</a> 
+            <a href="identificacion_scrum_stake.html" class="barra_secciones_activo">2. Identificar al Scrum Master y stakeholder(s)</a> 
+            <a href="formar_equipo_scrum.html">3. Formar el Equipo Scrum</a> 
+            <a href="desarrollar_epicas.html">4. Desarrollar épica(s)</a> 
+            <a href="crear_backlog.html">5. Crear el Backlog Priorizado del Producto</a> 
+            <a href="realizar_planificacion_lanzamiento.html">6. Realizar la planificación del  lanzamiento</a> 
+     </div>   
+        <div class="contenedor_informacion">
+		 <!-- <img class="contenedor_informacion_img" src="pexels-cong-h-1404819.jpg" alt=""> -->
+         <p class="titulo">Entradas</p>
+         <p class="subtitulo">Product Owner</p>
+         <div class="contenedor_imagen"><img src="images/ProductOwner.jpeg" alt="" class="contenedor_informacion_img_perfil"></div>
+         <p class="parrafo">En este proyecto, el Product Owner identificado es: Serna Malca, Luis Alejandro.
+            Quien representa la voz del cliente, y está a cargo de la articulación de requerimientos por
+            parte de los clientes y de mantener la justificación del negocio para el proyecto</p>
+
+         <p class="subtitulo">Declaración de la visión del proyecto</p>
+         <p class="parrafo">
+             Desarrollar un sistema web que ofrezca una solución integral y fácil de usar que permita a
+los veterinarios y al personal de la clínica acceder a los datos de los pacientes, llevar un
+seguimiento de las citas y tratamientos, y gestionar toda esta información de forma efectiv
+para que, de esta manera que se pueda ofrecer una atención al cliente de alta calidad y
+mejorar la calidad de los servicios que se brindan a los pacientes. Además, se espera que el
+sistema contribuya a aumentar la rentabilidad y eficiencia de la veterinaria, ayudando a la
+clínica a crecer y expandirse en el mercado de la salud animal.  </p>
+
+         <p class="subtitulo">Requerimientos de las personas</p>
+
+         <div class="contenedor_imagen"><img src="images/RequerimientosPersonas.png" alt="" class="contenedor_informacion_img_small"></div>
+
+         <p class="subtitulo">Disponibilidad y compromiso de las personas</p>
+
+         <div class="contenedor_imagen"><img src="images/Disponibilidad.png" alt="" class="contenedor_informacion_img"></div>
+
+         <p class="subtitulo">Matriz de requerimientos de habilidades</p>
+
+         <div class="contenedor_imagen"><img src="images/RequerimientosHabilidades.png" alt="" class="contenedor_informacion_img"></div>
+
+         <p class="titulo">Herramientas</p>
+
+         <p class="subtitulo">Criterios de selección</p>
+
+         <div class="contenedor_imagen"><img src="images/Crit-Seleccion-ScrumMaster.png" alt="" class="contenedor_informacion_img"></div>
+
+         <p class="titulo">Salidas</p>
+
+         <p class="subtitulo">Scrum Master identificado</p>
+
+         <div class="contenedor_imagen"><img src="images/ScrumMaster.jpeg" alt="" class="contenedor_informacion_img_perfil"></div>
+
+         <p class="parrafo">En este proyecto, el Scrum Master identificado es: Vera Rodríguez, José Andrés
+             Quien se encargará de ser el guía, que facilite y enseñe prácticas de Scrum a todos los
+             involucrados en el proyecto; de eliminar impedimentos que enfrenta el equipo y
+             asegurarse de que se estén siguiendo los procesos de Scrum.
+             </p>
+
+             <p class="subtitulo">Stakeholder</p>
+             <p class="parrafo">Para este proyecto el Stakeholder identificado es el dueño de la veterinaria.</p>
+             <div class="contenedor_imagen"><img src="images/stakeholder.jpeg" alt="" class="contenedor_informacion_img_perfil"></div>
+             <p class="nombre_stake">Raciel Antonio Levano Pachas</p>
+
+
+            
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Proyecto - Ing. de Software 2023</p>
+    </footer>
+</body>
+    <script>
+        const header = document.querySelector('.header');
+
+        const barra_menu = document.querySelector('.barra_menu');
+        const seccion_principal = document.querySelector('.seccion_principal');
+
+        barra_menu.addEventListener('click',(e)=>{
+            e.preventDefault();
+            if(seccion_principal.classList.contains('menu_inactivo')){
+                //esta activo el menu, desactivarlo
+                seccion_principal.classList.remove('menu_inactivo');
+                seccion_principal.classList.add('menu_activo');
+                //cambiar a X el icono
+                barra_menu.innerHTML = '<i class="fa-solid fa-x icono_menu"></i>'
+                return;
+            }
+            seccion_principal.classList.add('menu_inactivo');
+            seccion_principal.classList.remove('menu_activo');
+            barra_menu.innerHTML = '<i class="fa-solid fa-bars icono_menu"></i>'
+
+        })
+
+        window.addEventListener('scroll',function(){
+            const scrollY = window.scrollY;
+            if(scrollY>0){
+                header.classList.add('navegacion_scroll')
+                return;
+            }
+            header.classList.remove('navegacion_scroll');
+        })
+    </script>
+</html> 

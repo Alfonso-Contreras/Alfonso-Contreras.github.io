@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="logo_pata.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+
+    <title>Orejitas y colitas</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: 'Rubik', sans-serif;
+    }
+
+    body::-webkit-scrollbar{
+            background-color: white;
+            width: 7px;
+        }
+
+        html{
+    scroll-behavior: smooth;
+}
+
+        body::-webkit-scrollbar-thumb{
+            background-color: #ff9d00;
+            border-radius: 5px;
+        }
+
+    div.menu{
+        background-color: black;
+        width: 100%;
+        height: 100px;
+    }
+
+    div.container{
+        background-color: blue;
+        width: 100%;
+
+
+        /*Function calc*/
+        height: calc(100vh - 100px);
+
+    }
+
+    h1::after{
+        content: attr(data-name);
+    }
+
+    .imagen, .img{
+        background-color: aqua;
+        background-blend-mode: soft-light;
+    }
+
+    a{
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+    }
+
+    .contenedor{
+        
+        height: 55px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 30px;
+        gap: 0 15px;
+        font-family: 'Rubik', sans-serif;
+        /* background-color: #F8CB2E; */
+        background-color: #ff9d00;
+        text-transform: uppercase;
+    }
+
+    .contenedor_enlaces{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        font-size: 17px;
+        text-transform: uppercase;
+    }
+
+    .logo:nth-child(1){
+        font-weight: 700;
+        font-size: 20px;
+
+    }
+
+    img{
+        width: 100%;
+    }
+
+    header{
+        background-image: url('veterinaria.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.651);
+        background-blend-mode: soft-light;
+        height: calc(100vh - 125px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 30px 0;
+        padding: 20px 180px 50px 180px;
+        color: white;
+        
+    }
+
+    .inicio{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-family: 'Rubik', sans-serif;
+        
+
+    }
+
+    .inicio a{
+        color: white;
+    }
+
+    .inicio_enlaces{
+        display: flex;
+        align-items: center;
+        gap: 0 60px;
+        
+    }
+    .inicio_enlaces a{
+        transition: all 300ms;
+    }
+
+    .inicio_enlaces a:hover{
+       color: #EE5007;
+       transform: scale(1.15);
+    }
+
+    .inicio_enlaces a:last-child{
+        color: white;
+    }
+
+    .centro{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px 0;
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .final{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 24px;
+        gap: 0 15px;
+
+    }
+
+    .final_inicio, .final_centro, .final_final{
+        display: flex;
+        align-items: center;
+        gap: 0 15px;
+    }
+
+    .final_centro{
+        margin: 0 auto;
+    }
+
+    .icono{
+        color: white;
+    }
+
+
+
+    .header_contenedor{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0 60vh;
+        font-family: 'Rubik', sans-serif;
+        font-size: 22px;
+        margin-top: 70vh;
+    }
+
+    .btn{
+        background-color: #252830;
+        color: white;
+        font-family: 'Rubik', sans-serif;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-size: 17px;
+        padding: 15px 35px;
+        border: none;
+        border-radius: 20px;
+        transition: all 300ms;
+    }
+
+    .btn:hover,.btn_logout:hover{
+        background-color: #c01f27;
+        cursor: pointer;
+        transform: scale(1.15);
+    }
+
+    .btn_logout{
+        background-color: #252830;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 18px;
+        transition: all 300ms;
+    }
+
+    .frase{
+        font-family: 'Rubik', sans-serif;
+        font-weight: 500;
+        font-size: 40px; 
+        text-transform: uppercase;
+          
+    }
+    .fa-solid{
+        color: black;
+        font-size: 22px;
+    }
+
+    .contenedor_nombre{
+        display: flex;
+        gap: 0 15px;
+        align-items: center;
+        text-transform: uppercase;
+    }
+
+    .imagen_logo{
+        width: 40px;
+        height: 40px;
+    }
+
+    .icono_final{
+        background-color: #252830;
+        padding: 12px;
+        border-radius: 50%;
+        transition: all 300ms;
+    }
+
+    .icono_final:hover{
+        cursor: pointer;
+        transform: scale(1.15);
+        rotate: calc(360deg);
+    }
+
+    .info{
+        
+        background-image: url(equipo_img.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.651);
+        background-blend-mode: soft-light;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0 100px;
+        padding: 50px 30px;
+        color: black;
+        
+
+    }
+
+    .info_texto p:nth-child(1){
+        font-size: 40px;
+        font-weight: 600;
+    }
+
+    .info_texto p:nth-child(2){
+        font-size: 20px;
+        text-align: justify;
+        font-weight: 400;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        line-height: 29px;
+        
+    }
+
+    .info_texto{
+        display: flex;
+        flex-direction: column;
+        gap: 30px 0;
+        width: 50%;
+        background-color: white;
+        padding: 30px 50px;
+        border-radius: 20px;
+    }
+
+    .info_imagen{
+        height: 100%;
+        width: 50%;
+        background-image: url(pexels-scott-webb-136739.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 30px;
+    }
+
+    .info_imagen_fondo{
+        width: 50%;
+        height: 100px;
+        background: rgba(226, 209, 209, 0.663);
+        width: 100%;
+        font-size: 20px;
+        color: black;
+        text-align: center;
+    }
+
+    .contenedor_nombre{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .contenedor_logo{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0 15px;
+    }
+
+    .contenedor_logo a{
+        font-weight: 500;
+    }
+
+    .contenedor_menu{
+        display: none;
+    }
+
+    .contenedor_menu:hover{
+        cursor: pointer;
+    }
+
+    .barra{
+            color: black;
+            font-size: 25px;
+        }
+
+        
+        .menu_desplegable{
+            display: none;
+            transition: all 400ms;
+        }
+        .barra:hover{
+            cursor: pointer;
+        }
+        .cont-menu{
+             position: absolute;
+            right: 1rem; 
+            /*background-color: rgba(255, 255, 255, .1);*/
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            gap: 8px 0;
+            font-size: 22px;
+            padding: 20px 0;
+            width: 300px;
+            transition: all 400ms;
+            
+        }
+
+        .cont-menu a{
+            transition: all .5s;
+            padding: 10px 0;
+            width: 100%;
+            text-align: center;
+            color: white;
+        }
+
+        .cont-menu a:hover{
+            color: #EE5007;
+        }
+        .icono_close{
+            display: flex;
+            flex-direction: row;
+            align-items: end;
+            justify-content: end;
+            padding: 0px 20px;
+            
+        }
+        .active{
+           
+              transform: translateY(-600px);  
+        }
+
+        .opacity{
+            background-color: rgba(0, 0, 0, .5);
+            
+        }
+
+        .inicio_nombre .logo{
+            font-size: 28px;
+        }
+
+        #icono_close:hover{
+            cursor: pointer;
+        }
+
+        /*INICIO PRUEBA*/
+
+        .presentacion_card{
+        background-color: white;
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 20px;
+        box-shadow: 0px -1px 7px 8px rgba(0,0,0,0.17);
+        -webkit-box-shadow: 0px -1px 7px 8px rgba(0,0,0,0.17);
+        -moz-box-shadow: 0px -1px 7px 8px rgba(0,0,0,0.17);
+        transition: all 500ms;
+    }
+
+    .presentacion_card:hover{
+       cursor: grab;
+    }
+
+    .presentacion_card_foto{
+        padding: 25px 0;
+        background-color: #4070F4;
+        width: 100%;
+        text-align: center;
+        border-radius:  20px 20px 0 20px;
+    }
+    .presentacion_card_img{
+        width: 150px;
+        border-radius: 50%;
+        padding: 5px;
+        border: 3px solid white;
+    }
+
+    .presentacion_card_claro{
+        padding: 20px 0;
+        background-color: white;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        border-radius: 0 0 20px 20px;
+        gap: 15px 0;
+        color: black;
+    }
+
+    .presentacion_card_name{
+        font-size: 23px;
+        font-weight: 500;
+        color: black;
+    }
+
+    .presentacion_card_descripcion{
+        padding: 0 20px;
+        text-align: justify;
+        
+    }
+
+    .presentacion_card_cargo{
+        font-weight: 500;
+        font-size: 16px;
+        color: black;
+        background-color: #4070F4;
+        color: white;
+        padding: 5px 20px;
+        border-radius: 30px;
+        transition: all 300ms;
+       
+    }
+
+    .presentacion_card_cargo:hover{
+        transform: scale(1.08);
+    }
+
+    .swiper{
+        width: 350px;
+        margin-top: 0;
+    }
+
+    .seccion_nosotros{
+        padding: 50px 0;
+        position: relative;
+        width:500px;
+        display: flex;
+        align-items: center;
+    }
+
+    .swiper-pagination-bullet{
+        background-color: #3268fa;
+    }
+
+    .titulo_participantes{
+        color: white;
+        font-size: 24px;
+        font-weight: 500;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .footer{
+        color: white;
+        text-align: center;
+        background-color: #252830;
+        padding: 20px 0;
+        font-size: 19px;
+    }
+        /*PRUEBAAAA*/
+
+    @media (max-width: 1279px) {
+        .final{
+            flex-direction: column;
+            gap: 20px 0;
+            align-items: center;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .contenedor_menu{
+        display: block;
+        }
+
+        header{
+            padding: 0px 0px 100px 0px;
+            height: calc(100vh - 155px);
+        }
+
+        .inicio{
+            display: none;
+        }
+
+        .menu_desplegable{
+            display: block;
+        }
+
+        .centro .frase{
+            padding: 0 10px;
+        }
+
+        .info{
+            flex-direction: column;
+        }
+
+        .info_texto{
+            width: 80%;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .info_texto{
+            display: none;
+        }
+        .frase{
+            font-size: 28px;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+        }
+
+        .swiper-button-next{
+            display: none;
+        }
+
+        .swiper-button-prev{
+            display: none;
+        }
+
+        .seccion_nosotros{
+            width: 100%;
+        }
+
+        .centro{
+            width: 90%;
+        }
+
+        .titulo_participantes{
+            display: flex;
+        }
+    }
+
+
+   
+
+</style>
+<body>
+    <!-- <div class="menu">
+
+    </div>
+    <div class="container">
+        
+    </div> -->
+    <!-- <h1 data-name="Jorge">Hola</h1> -->
+    <!-- <div class="imagen">
+        <img src="atardecer-en-la-playa_3840x2400_xtrafondos.com.jpg" class="img" alt="img">
+    </div> -->
+        <div class="contenedor" id="inicio">
+
+            <div class="contenedor_logo">
+                <img src="untels-02-4.png" alt="" class="imagen_logo">
+                <a href="" class="logo">Universidad Nacional Tecnológica de Lima Sur</a>
+            </div>
+            <div class="contenedor_menu">
+                <i class="fa-solid fa-bars" id="icono-menu"></i>
+
+        </div>
+    </div>
+
+    <header >
+        <div class="menu_desplegable">
+        
+            <div class="cont-menu active" id="menu">
+                <div class="icono_close">
+                    <i class="fa-solid fa-xmark" id="icono_close" style="color: #ffffff;"></i>
+                </div>
+                <a href="#inicio">Inicio</a>     
+                <a href="#participantes">Participantes</a>    
+            </div>
+        </div>
+        
+
+        <div class="inicio">
+            <div class="inicio_nombre">
+                <a href="" class="logo">Orejitas y colitas</a>
+            </div>
+    
+            <div class="inicio_enlaces">
+                <a href="#inicio">Inicio</a>        
+                <a href="#participantes">Participantes</a>       
+            </div>
+        </div>
+
+        <div class="centro">
+            <p class="frase">Implementación de un sistema web, para la gestión de datos de la veterinaria "Orejitas y Colitas"</p>
+            <a href="blog.html"><button class="btn">Visitar Blog</button></a>
+        </div>
+        
+        <div class="final">
+            <div class="final_centro">
+                <i class="fa-solid fa-location-dot icono" style="color: #ffffff;"></i>
+                <p>Surco, Calle Monte Abeto 915</p>
+            </div>
+            
+        </div>
+    </header>
+
+        <div class="info" id="participantes">
+            <!-- <div class="info_texto">
+                <p>Lorem ipsum dolor sit</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor numquam omnis sunt ad rem aperiam amet nisi ducimus ea aliquid, eum, illum, molestias eligendi quo ipsa sed deserunt quod repudiandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor numquam omnis sunt ad rem aperiam amet nisi ducimus ea aliquid, eum, illum, molestias eligendi quo ipsa sed deserunt quod repudiandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor numquam omnis sunt ad rem aperiam amet nisi ducimus ea aliquid, eum, illum, molestias eligendi quo ipsa sed deserunt quod repudiandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor numquam omnis sunt ad rem aperiam amet nisi ducimus ea aliquid, eum, illum, molestias eligendi quo ipsa sed deserunt quod repudiandae. </p>
+            </div> -->
+
+            <div class="titulo_participantes">
+                <p>Participantes del proyecto</p>
+            </div>
+
+            
+            <section class="seccion_nosotros" >
+                <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+
+
+
+                <div class="presentacion_card swiper-slide">
+                    <div class="presentacion_card_foto">
+                        <img class="presentacion_card_img" src="images/ProductOwner.jpeg" alt="">
+                    </div>
+                    <div class="presentacion_card_claro">
+                        <p class="presentacion_card_name">Serna Malca Luis</p>
+                        <p class="presentacion_card_descripcion">Es el Product Owner quien representa la voz del cliente, y está a cargo de la articulación de requerimientos por parte de los clientes y de mantener la justificación del negocio para el proyecto.</p>
+                        <p class="presentacion_card_cargo">Product Owner</p>
+                    </div>
+        
+                </div>
+
+
+                <div class="presentacion_card swiper-slide">
+                    <div class="presentacion_card_foto">
+                        <img class="presentacion_card_img" src="images/ScrumMaster.jpeg" alt="">
+                    </div>
+                    <div class="presentacion_card_claro">
+                        <p class="presentacion_card_name">Vera Rodriguez José</p>
+                        <p class="presentacion_card_descripcion">Es el Scrum Master quien se encargará de ser el guía, que facilite y enseñe prácticas de Scrum a todos los involucrados en el proyecto; de eliminar impedimentos que enfrenta el equipo y asegurarse de que se estén siguiendo los procesos de Scrum.</p>
+                        <p class="presentacion_card_cargo">Scrum Master</p>
+                    </div>
+        
+                </div>
+
+                
+                <div class="presentacion_card swiper-slide">
+                    <div class="presentacion_card_foto">
+                        <img class="presentacion_card_img" src="images/desarrollador_flores.jpg" alt="">
+                    </div>
+                    <div class="presentacion_card_claro">
+                        <p class="presentacion_card_name">Flores Chamba Jose</p>
+                        <p class="presentacion_card_descripcion">Es parte del Equipo Scrum (Equipo de desarrollo) quien se encargará de la creación del sistema en la parte del Back-end, utilizando sus conocimientos y habilidades para el correcto desarrollo de las actividades.</p>
+                        <p class="presentacion_card_cargo">Desarrollador</p>
+                    </div>
+        
+                </div>
+
+                <div class="presentacion_card swiper-slide">
+                    <div class="presentacion_card_foto">
+                        <img class="presentacion_card_img" src="1923010051.jpg" alt="">
+                    </div>
+                    <div class="presentacion_card_claro">
+                        <p class="presentacion_card_name">Contreras Gómez Paulino</p>
+                        <p class="presentacion_card_descripcion">Es parte del Equipo Scrum (Equipo de desarrollo) quien se encargará de la creación del sistema en la parte del Front-end, utilizando sus conocimientos y habilidades para el correcto desarrollo de sus actividades.</p>
+                        <p class="presentacion_card_cargo">Desarrollador</p>
+                    </div>
+        
+                </div>
+
+        
+                <div class="presentacion_card swiper-slide">
+                    <div class="presentacion_card_foto">
+                        <img class="presentacion_card_img" src="images/desarrollador_edson.jpg" alt="">
+                    </div>
+                    <div class="presentacion_card_claro">
+                        <p class="presentacion_card_name">Alva Chanta Edson</p>
+                        <p class="presentacion_card_descripcion">Es parte del Equipo Scrum (Equipo de desarrollo) quien se encargará de la creación del sistema en la parte del Front-end, utilizando sus conocimientos y habilidades para el correcto desarrollo de las actividades.</p>
+                        <p class="presentacion_card_cargo">Desarrollador</p>
+                    </div>
+        
+                </div>
+
+
+
+                <div class="presentacion_card swiper-slide">
+                    <div class="presentacion_card_foto">
+                        <img class="presentacion_card_img" src="images/desarrollador_motta.jpg" alt="">
+                    </div>
+                    <div class="presentacion_card_claro">
+                        <p class="presentacion_card_name">Motta Mendoza Miguel</p>
+                        <p class="presentacion_card_descripcion">Es parte del Equipo Scrum (Equipo de desarrollo) quien se encargará de la creación del sistema en la parte del Back-end, utilizando sus conocimientos y habilidades para el correcto desarrollo de sus actividades.</p>
+                        <p class="presentacion_card_cargo">Desarrollador</p>
+                    </div>
+        
+                </div>
+
+
+
+        
+            </div>
+           
+        </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </section>
+
+
+
+
+        </div>  
+
+        <footer class="footer">
+            <p>Proyecto - Ing. de Software 2023</p>
+        </footer>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+    const iconoMenu = document.querySelector('#icono-menu');
+    const iconoClose = document.querySelector('#icono_close');
+    const menu = document.querySelector('#menu');
+    iconoMenu.addEventListener('click',function(){
+        if(menu.classList.contains('active')){
+            menu.classList.remove('active');
+            document.body.classList.add('opacity');
+            
+            return;
+        }
+        menu.classList.add('active');
+        document.body.classList.remove('opacity');
+
+    })
+
+    iconoClose.addEventListener('click',function(){
+        menu.classList.add('active');
+        document.body.classList.remove('opacity');
+    })
+
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+</script>
+</html>

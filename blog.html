@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="logo_pata.png">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orejitas y colitas</title>
+</head>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Rubik', sans-serif;
+        }
+
+        :root{
+            --color-primario: #131417;
+            --color-secundario: #252830;
+        }
+
+        body::-webkit-scrollbar{
+            background-color: white;
+            width: 7px;
+        }
+
+        body::-webkit-scrollbar-thumb{
+            background-color: #ff9d00;
+            border-radius: 5px;
+        }
+
+        body{
+            background-color: var(--color-primario);
+        }
+
+        .header{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--color-secundario);
+            color: white;
+            padding: 20px 40px;
+            transition: all 200ms;
+            
+        }
+
+        .header_enlaces{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0 30px;
+        }
+
+        .header_titulo{
+            text-transform: uppercase;
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        .header_enlace{
+            color: white;
+            font-size: 25px;
+        }
+
+
+        .header_enlace_modoOscuro{
+            color: rgb(255, 227, 86);
+            
+        }
+
+        .contenedor_cards{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            margin: 0 auto;
+            justify-items: center;
+            width: 80%;
+            gap: 50px 0px;
+            justify-content: center;
+           
+            align-content: center;
+          
+        }
+        .card{
+           
+            width: 300px;   
+            padding: 20px 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 15px 0;
+            background-color: var(--color-secundario);
+            color: #afb6cd;
+            border-radius: 10px;
+            line-height: 23px;
+            transition: all 600ms;
+            height: 200px;
+        }
+
+        .card:hover{
+            transform: scale(1.04);
+        }
+
+
+        .card_imagen{
+            width: 100%;
+        }
+
+        .card_titulo{
+            font-weight: 700;
+            font-size: 25px;
+            text-align: center;
+            color: white;
+        }
+
+        .card_descripcion{
+            text-align: justify;
+        }
+
+        .card_fecha{
+            text-align: center;
+            color: rgb(145, 145, 145);
+        }
+
+        .card_boton{
+            padding: 15px 0;
+            font-weight: 600;
+            font-size: 15px;
+            text-transform: uppercase;
+            color: white;
+            background-color: transparent;
+            border: solid 2px white;
+            border-radius: 15px;
+            transition: all 400ms;
+        }
+
+        .card_boton:hover{
+            background-color: #ff9d00;
+            color: var(--color-secundario);
+            cursor: pointer;
+        }
+
+        .footer{
+            background-color: var(--color-secundario);
+
+            color: white;
+            text-align: center;
+            margin-top: 100px;
+            font-weight: 400;
+            padding: 20px 0;
+            font-size: 19px;
+            box-sizing: border-box;
+        }
+
+        .navegacion_scroll{
+            width: 100%;
+            position: fixed;
+            top: 0;
+            background: rgba(0, 0, 0, .5);
+            backdrop-filter: blur(20px);
+            box-sizing: border-box;
+            z-index: 10;
+        }
+
+        .titulo_blog{
+            color: white;
+            text-align: center;
+            margin: 80px 0;
+            font-size: 45px;
+        }
+
+        .seccion_principal a{
+            color: white;
+            text-decoration: none;
+            width: 100%;
+            box-sizing: border-box;
+            height: 100%;
+            text-align: center;
+            padding: 20px 30px;
+            text-transform: uppercase;
+            font-size: 15px;
+            font-weight: 600;
+            transition: all 500ms;  
+        }
+
+        .seccion_principal a:hover{
+            background-color: #131417; 
+        }
+
+        .seccion_principal{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            border: #131417 solid 1px;
+            background-color: #252830;  
+        }
+
+        .seccion_activa{
+            background-color: var(--color-primario);
+           
+        }
+
+        .barra_menu{
+            display: none;
+        }
+
+        .icono_menu{
+            color: white;
+            font-size: 25px;
+        }
+
+
+
+        .menu_activo{
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 76px;
+            z-index: 10;
+            animation: slideLeft 500ms ease forwards;
+            opacity: 0;
+
+        }
+
+        @keyframes slideLeft{
+            0%{
+                opacity: 0;
+                transform: translateX(30px);
+            }
+
+            100%{
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+
+        @media (max-width: 680px) {
+            .seccion_principal{
+                flex-direction: column;
+                box-sizing: border-box;
+            }
+
+            .menu_inactivo{
+            display: none;
+        }
+
+
+            .header{
+                padding: 20px 30px;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            .barra_secciones{
+                display: none;
+            }
+
+            .contenedor_cards{
+                grid-template-columns: repeat(1,1fr);
+            }
+
+            .barra_menu{
+                display: flex;
+                text-decoration: none;
+            }
+
+            .footer{
+                font-size: 17px;
+            }
+
+            
+
+
+        }
+
+    </style>
+<body>
+    <header class="header ">
+        <div>
+            <p class="header_titulo">untels</p>
+        </div>
+        <div class="header_enlaces">
+            <a href="index.html"><i class="fa-solid fa-house header_enlace"></i></a>
+            <a href="#" class="barra_menu"><i class="fa-solid fa-bars icono_menu"></i></a>
+        </div>
+    </header>
+
+    <div class="seccion_principal menu_inactivo">
+        <a href="" class="seccion_activa">Inicio</a>
+        <a href="">Sprint I</a>
+        <a href="">Sprint II</a>
+        <a href="">Sprint III</a>
+    </div>
+
+    <h1 class="titulo_blog">Procesos de la fase de inicio</h1>
+
+    <div class="contenedor_cards">
+
+        <div class="card">
+                    <p style="text-align: center;"><i style="color: white; font-size: 40px;" class="fa-solid fa-address-book"></i></p>
+                    <p class="card_titulo">1.  Crear la visión del proyecto</p>
+                    <a href="crear_vision_proyecto.html"><button class="card_boton" style="width: 100%;">ver la sección</button></a>
+
+        </div>
+
+        <div class="card">
+            <p style="text-align: center;"><i style="color: white; font-size: 40px;" class="fa-solid fa-address-book"></i></p>
+            <p class="card_titulo">2. Identificar al Scrum Master y
+                stakeholder(s)
+                    </p>
+            <a href="identificacion_scrum_stake.html"><button class="card_boton" style="width: 100%;">ver la sección</button></a>
+
+</div>
+
+<div class="card">
+    <p style="text-align: center;"><i style="color: white; font-size: 40px;" class="fa-solid fa-address-book"></i></p>
+    <p class="card_titulo">3. Formar el Equipo Scrum</p>
+    <a href="formar_equipo_scrum.html"><button class="card_boton" style="width: 100%;">ver la sección</button></a>
+
+</div>
+
+<div class="card">
+    <p style="text-align: center;"><i style="color: white; font-size: 40px;" class="fa-solid fa-address-book"></i></p>
+    <p class="card_titulo">4.  Desarrollar épica(s)</p>
+    <a href="desarrollar_epicas.html"><button class="card_boton" style="width: 100%;">ver la sección</button></a>
+
+</div>
+
+<div class="card">
+    <p style="text-align: center;"><i style="color: white; font-size: 40px;" class="fa-solid fa-address-book"></i></p>
+    <p class="card_titulo">5. Crear el Backlog Priorizado
+        del Producto</p>
+    <a href="crear_backlog.html"><button class="card_boton" style="width: 100%;">ver la sección</button></a>
+
+</div>
+
+<div class="card">
+    <p style="text-align: center;"><i style="color: white; font-size: 40px;" class="fa-solid fa-address-book"></i></p>
+    <p class="card_titulo">6.   Realizar la planificación del
+        lanzamiento</p>
+    <a href="realizar_planificacion_lanzamiento.html"><button class="card_boton" style="width: 100%;">ver la sección</button></a>
+
+</div>  
+
+      
+     
+
+    </div>
+
+    <footer class="footer">
+        <p>Proyecto - Ing. de Software 2023</p>
+    </footer>
+</body>
+    <script>
+        const header = document.querySelector('.header');
+        const barra_menu = document.querySelector('.barra_menu');
+        const seccion_principal = document.querySelector('.seccion_principal');
+
+        barra_menu.addEventListener('click',(e)=>{
+            e.preventDefault();
+            if(seccion_principal.classList.contains('menu_inactivo')){
+                //esta activo el menu, desactivarlo
+                seccion_principal.classList.remove('menu_inactivo');
+                seccion_principal.classList.add('menu_activo');
+                //cambiar a X el icono
+                barra_menu.innerHTML = '<i class="fa-solid fa-x icono_menu"></i>'
+                return;
+            }
+            seccion_principal.classList.add('menu_inactivo');
+            seccion_principal.classList.remove('menu_activo');
+            barra_menu.innerHTML = '<i class="fa-solid fa-bars icono_menu"></i>'
+
+        })
+
+        window.addEventListener('scroll',function(){
+            const scrollY = window.scrollY;
+            if(scrollY>0){
+                header.classList.add('navegacion_scroll')
+                return;
+            }
+            header.classList.remove('navegacion_scroll');
+        })
+    </script>
+</html>
