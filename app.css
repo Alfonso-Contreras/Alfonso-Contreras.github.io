@@ -348,8 +348,12 @@ height: 260px;
     text-align: center;
     font-size: 23px;
     color: #1249e1;
+    color: white;
     font-weight: 900;
     transition: all 500ms;
+    background-color: #4070F4;
+    padding: 8px 0;
+    border-radius: 5px;
 }
 
 .url_video:hover{
