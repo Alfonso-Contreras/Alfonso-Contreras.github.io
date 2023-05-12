@@ -8,8 +8,10 @@
     <link rel="shortcut icon" href="logo_pata.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="fontawesome/css/all.css">
-
+    <link rel="stylesheet" href="landing.css">
     <title>Orejitas y colitas</title>
+
+
 </head>
 <style>
     *{
@@ -28,7 +30,7 @@
 }
 
         body::-webkit-scrollbar-thumb{
-            background-color: #ff9d00;
+            background-color: #4070F4;
             border-radius: 5px;
         }
 
@@ -192,7 +194,8 @@
     }
 
     .btn{
-        background-color: #252830;
+        /* background-color: #252830; */
+        background-color: #4070F4;
         color: white;
         font-family: 'Rubik', sans-serif;
         font-weight: 700;
@@ -203,10 +206,11 @@
         border: none;
         border-radius: 20px;
         transition: all 300ms;
+       
     }
 
     .btn:hover,.btn_logout:hover{
-        background-color: #c01f27;
+        background-color: #1f62c0;
         cursor: pointer;
         transform: scale(1.15);
     }
@@ -225,10 +229,6 @@
         font-size: 40px; 
         text-transform: uppercase;
           
-    }
-    .fa-solid{
-        color: black;
-        font-size: 22px;
     }
 
     .contenedor_nombre{
@@ -509,8 +509,8 @@
     .footer{
         color: white;
         text-align: center;
-        background-color: #252830;
-        padding: 20px 0;
+        background-color: #131417;
+        padding: 18px 0;
         font-size: 19px;
     }
         /*PRUEBAAAA*/
@@ -584,6 +584,20 @@
         .titulo_participantes{
             display: flex;
         }
+
+        .landingPage_header_enlace_hidden{
+            display: none;
+        }
+
+        .contenedor_barra{
+            display: flex;
+        }
+
+        .container_tituloProyecto_lugar{
+            height: calc(100vh - 102px);
+        }
+
+       
     }
 
 
@@ -591,74 +605,43 @@
 
 </style>
 <body>
-    <!-- <div class="menu">
-
-    </div>
-    <div class="container">
-        
-    </div> -->
-    <!-- <h1 data-name="Jorge">Hola</h1> -->
-    <!-- <div class="imagen">
-        <img src="atardecer-en-la-playa_3840x2400_xtrafondos.com.jpg" class="img" alt="img">
-    </div> -->
-        <div class="contenedor" id="inicio">
-
-            <div class="contenedor_logo">
-                <img src="untels-02-4.png" alt="" class="imagen_logo">
-                <a href="" class="logo">Universidad Nacional Tecnológica de Lima Sur</a>
-            </div>
-            <div class="contenedor_menu">
-                <i class="fa-solid fa-bars" id="icono-menu"></i>
-
-        </div>
-    </div>
-
-    <header >
-        <div class="menu_desplegable">
-        
-            <div class="cont-menu active" id="menu">
-                <div class="icono_close">
-                    <i class="fa-solid fa-xmark" id="icono_close" style="color: #ffffff;"></i>
+   
+        <section class="landingPage" id="inicio">
+            <div class="landingPage_header ">
+                <a href="" class="landingPage_header_enlace titulo_empresa">Orejitas y Colitas</a>
+                <div class="landingPage_header_enlace_secciones">
+                    <a href="#inicio" class="landingPage_header_enlace landingPage_header_enlace_hidden">Inicio</a>
+                    <a href="#nosotros" class="landingPage_header_enlace landingPage_header_enlace_hidden">Nosotros</a>
+                    <a href="" class="contenedor_barra"><i class="fa-solid fa-bars icono_barra"></i></a>
                 </div>
-                <a href="#inicio">Inicio</a>     
-                <a href="#participantes">Participantes</a>    
-            </div>
-        </div>
-        
 
-        <div class="inicio">
-            <div class="inicio_nombre">
-                <a href="" class="logo">Orejitas y colitas</a>
             </div>
-    
-            <div class="inicio_enlaces">
-                <a href="#inicio">Inicio</a>        
-                <a href="#participantes">Participantes</a>       
+
+            <div class="menu_responsive menu_responsive_inactivo" id="menu_responsive">
+                <a href="#inicio">Inicio</a>
+                <a href="#nosotros">Nosotros</a>
             </div>
+
+            <div class="container_tituloProyecto_lugar">
+                <p class="invicible_text">.</p>
+            <div class="landingPage_container_info">
+                <p class="landingPage_container_info_titulo">IMPLEMENTACIÓN DE UN SISTEMA WEB, PARA LA GESTIÓN DE DATOS DE LA VETERINARIA "OREJITAS Y COLITAS"</p>
+                <a href="blog.html"><button class="btn">Visitar Blog</button></a>
+            </div>
+
+            <div class="landingPage_container_direccion margen_agregado">
+                <p><i class="fa-solid fa-location-dot icono" style="color: #ffffff;"></i> Surco, Calle Monte Abeto 915</p>
+            </div>
+
         </div>
 
-        <div class="centro">
-            <p class="frase">Implementación de un sistema web, para la gestión de datos de la veterinaria "Orejitas y Colitas"</p>
-            <a href="blog.html"><button class="btn">Visitar Blog</button></a>
-        </div>
-        
-        <div class="final">
-            <div class="final_centro">
-                <i class="fa-solid fa-location-dot icono" style="color: #ffffff;"></i>
-                <p>Surco, Calle Monte Abeto 915</p>
-            </div>
-            
-        </div>
-    </header>
+        </section>
 
-        <div class="info" id="participantes">
-            <!-- <div class="info_texto">
-                <p>Lorem ipsum dolor sit</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor numquam omnis sunt ad rem aperiam amet nisi ducimus ea aliquid, eum, illum, molestias eligendi quo ipsa sed deserunt quod repudiandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor numquam omnis sunt ad rem aperiam amet nisi ducimus ea aliquid, eum, illum, molestias eligendi quo ipsa sed deserunt quod repudiandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor numquam omnis sunt ad rem aperiam amet nisi ducimus ea aliquid, eum, illum, molestias eligendi quo ipsa sed deserunt quod repudiandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor numquam omnis sunt ad rem aperiam amet nisi ducimus ea aliquid, eum, illum, molestias eligendi quo ipsa sed deserunt quod repudiandae. </p>
-            </div> -->
+        <div class="info" id="nosotros">
+           
 
             <div class="titulo_participantes">
-                <p>Participantes del proyecto</p>
+                <p>Nuestro equipo</p>
             </div>
 
             
@@ -766,27 +749,10 @@
         </footer>
 
 </body>
+<script src="landing.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 <script>
-    const iconoMenu = document.querySelector('#icono-menu');
-    const iconoClose = document.querySelector('#icono_close');
-    const menu = document.querySelector('#menu');
-    iconoMenu.addEventListener('click',function(){
-        if(menu.classList.contains('active')){
-            menu.classList.remove('active');
-            document.body.classList.add('opacity');
-            
-            return;
-        }
-        menu.classList.add('active');
-        document.body.classList.remove('opacity');
 
-    })
-
-    iconoClose.addEventListener('click',function(){
-        menu.classList.add('active');
-        document.body.classList.remove('opacity');
-    })
 
     var swiper = new Swiper(".mySwiper", {
       spaceBetween: 30,

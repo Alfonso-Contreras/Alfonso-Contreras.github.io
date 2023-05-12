@@ -20,6 +20,7 @@
         :root{
             --color-primario: #131417;
             --color-secundario: #252830;
+            --color-bg-claro:#e6e6e6;
         }
 
         body::-webkit-scrollbar{
@@ -28,12 +29,12 @@
         }
 
         body::-webkit-scrollbar-thumb{
-            background-color: #ff9d00;
+            background-color: #4070F4;
             border-radius: 5px;
         }
 
         body{
-            background-color: var(--color-primario);
+            background-color: var(--color-bg-claro);
         }
 
         .header{
@@ -41,7 +42,7 @@
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-            background-color: var(--color-secundario);
+            background-color: var(--color-primario);
             color: white;
             padding: 20px 40px;
             transition: all 200ms;
@@ -92,12 +93,15 @@
             flex-direction: column;
             justify-content: space-between;
             gap: 15px 0;
-            background-color: var(--color-secundario);
-            color: #afb6cd;
+            background-color: white;
+            color: white;
             border-radius: 10px;
             line-height: 23px;
             transition: all 600ms;
             height: 200px;
+            box-shadow: 2px 1px 23px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 2px 1px 23px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 2px 1px 23px 0px rgba(0,0,0,0.75);
         }
 
         .card:hover{
@@ -113,7 +117,7 @@
             font-weight: 700;
             font-size: 25px;
             text-align: center;
-            color: white;
+            color: black;
         }
 
         .card_descripcion{
@@ -132,19 +136,20 @@
             text-transform: uppercase;
             color: white;
             background-color: transparent;
-            border: solid 2px white;
-            border-radius: 15px;
+            border: solid 2px rgb(0, 0, 0);
+
             transition: all 400ms;
+            color: black;
         }
 
         .card_boton:hover{
-            background-color: #ff9d00;
-            color: var(--color-secundario);
+            background-color: #4070F4;
+            color: white;
             cursor: pointer;
         }
 
         .footer{
-            background-color: var(--color-secundario);
+            background-color: var(--color-primario);
 
             color: white;
             text-align: center;
@@ -166,7 +171,7 @@
         }
 
         .titulo_blog{
-            color: white;
+            color: black;
             text-align: center;
             margin: 80px 0;
             font-size: 45px;
@@ -309,14 +314,14 @@
     <div class="contenedor_cards">
 
         <div class="card">
-                    <p style="text-align: center;"><i style="color: white; font-size: 40px;" class="fa-solid fa-address-book"></i></p>
+                    <p style="text-align: center;"><i style="color: black; font-size: 40px;" class="fa-solid fa-address-book"></i></p>
                     <p class="card_titulo">1.  Crear la visión del proyecto</p>
                     <a href="crear_vision_proyecto.html"><button class="card_boton" style="width: 100%;">ver la sección</button></a>
 
         </div>
 
         <div class="card">
-            <p style="text-align: center;"><i style="color: white; font-size: 40px;" class="fa-solid fa-address-book"></i></p>
+            <p style="text-align: center;"><i style="color: black; font-size: 40px;" class="fa-solid fa-address-book"></i></p>
             <p class="card_titulo">2. Identificar al Scrum Master y
                 stakeholder(s)
                     </p>
@@ -325,21 +330,21 @@
 </div>
 
 <div class="card">
-    <p style="text-align: center;"><i style="color: white; font-size: 40px;" class="fa-solid fa-address-book"></i></p>
+    <p style="text-align: center;"><i style="color: black; font-size: 40px;" class="fa-solid fa-address-book"></i></p>
     <p class="card_titulo">3. Formar el Equipo Scrum</p>
     <a href="formar_equipo_scrum.html"><button class="card_boton" style="width: 100%;">ver la sección</button></a>
 
 </div>
 
 <div class="card">
-    <p style="text-align: center;"><i style="color: white; font-size: 40px;" class="fa-solid fa-address-book"></i></p>
+    <p style="text-align: center;"><i style="color: black; font-size: 40px;" class="fa-solid fa-address-book"></i></p>
     <p class="card_titulo">4.  Desarrollar épica(s)</p>
     <a href="desarrollar_epicas.html"><button class="card_boton" style="width: 100%;">ver la sección</button></a>
 
 </div>
 
 <div class="card">
-    <p style="text-align: center;"><i style="color: white; font-size: 40px;" class="fa-solid fa-address-book"></i></p>
+    <p style="text-align: center;"><i style="color: black; font-size: 40px;" class="fa-solid fa-address-book"></i></p>
     <p class="card_titulo">5. Crear el Backlog Priorizado
         del Producto</p>
     <a href="crear_backlog.html"><button class="card_boton" style="width: 100%;">ver la sección</button></a>
@@ -347,7 +352,7 @@
 </div>
 
 <div class="card">
-    <p style="text-align: center;"><i style="color: white; font-size: 40px;" class="fa-solid fa-address-book"></i></p>
+    <p style="text-align: center;"><i style="color: black; font-size: 40px;" class="fa-solid fa-address-book"></i></p>
     <p class="card_titulo">6.   Realizar la planificación del
         lanzamiento</p>
     <a href="realizar_planificacion_lanzamiento.html"><button class="card_boton" style="width: 100%;">ver la sección</button></a>
