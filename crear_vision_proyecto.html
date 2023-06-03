@@ -23,12 +23,49 @@
         </div>
     </header>
 
-    <div class="seccion_principal menu_inactivo">
-        <a href="blog.html">Inicio</a>
-        <a href="">Sprint I</a>
-        <a href="">Sprint II</a>
-        <a href="">Sprint III</a>
-    </div>
+    <nav class="navbar menu_oculto">
+        <ul>
+            <li class="seccion_activa"><a href="blog.html" >Inicio</a></li>
+            <li><a href="#">Sprint I</a>
+                <ul>
+                    <li><a href="#">Planificación y estimación</a>
+                        <ul>
+                            <li><a href="sprint1/planificacion-y-estimacion/crear-historias-usuario.html">Crear historias de usuario</a></li>
+                            <li><a href="sprint1/planificacion-y-estimacion/estimar-historias-usuario.html">Estimar historias de usuario</a></li>
+                            <li><a href="sprint1/planificacion-y-estimacion/comprometer-historias-usuario.html">Comprometer historias de usuario</a></li>
+                            <li><a href="sprint1/planificacion-y-estimacion/identificar-tareas.html">Identificar tareas</a></li>
+                            <li><a href="sprint1/planificacion-y-estimacion/estimar-tareas.html">Estimar tareas</a></li>
+                            <li><a href="sprint1/planificacion-y-estimacion/crear-sprint-del-backlog.html">Crear sprint del backlog</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Implementación</a>
+                        <ul>
+                            <li><a href="sprint1/implementacion/crear-entregables.html">Crear entregables</a></li>
+                            <li><a href="sprint1/implementacion/refinamiento-del-backlog-priorizado.html">Refinamiento del backlog priorizado</a></li>
+                            <li><a href="sprint1/implementacion/realizar-daily-standup.html">Realizar Daily Standup</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a href="#">Revisión y retrospectiva</a>
+                        <ul>
+                            <li><a href="sprint1/revision-y-retrospectiva/demostrar-y-validar-el-sprint.html">Demostrar y validar el sprint</a></li>
+                            <li><a href="sprint1/revision-y-retrospectiva/retrospectiva-del-sprint.html">Retrospectiva del sprint</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a href="#">Lanzamiento</a>
+                        <ul>
+                            <li><a href="sprint1/lanzamiento/envio-de-entregables.html">Envio de entregables</a></li>
+                            <li><a href="sprint1/lanzamiento/retrospectiva-del-proyecto.html">Retrospectiva del proyecto</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="">Sprint II</a></li>
+            <li><a href="">Sprint III</a></li>
+        </ul>
+    </nav>
 
     <h1 class="titulo_blog">1. Creación de la visión del proyecto</h1>
 
@@ -98,26 +135,26 @@ y deseamos dar una atención médica que satisfaga las expectativas de nuestros 
             <div class="contenedor_imagen"><img src="images/Reunion-Vision.png" alt="" class="contenedor_informacion_img"></div>
             <p class="parrafo">En la reunión de la visión del proyecto se vió lo siguiente:
             </p>
-            <p class="parrafo">- Presentación del proyecto: Descripción general del proyecto y el propósito del
+            <p class="parrafo"><i class="fa-solid fa-check check_verde"></i> Presentación del proyecto: Descripción general del proyecto y el propósito del
                 sistema web de gestión de datos. Se explicó por qué se está llevando a cabo el
                 proyecto, cuáles son los objetivos principales y qué se espera lograr.
                 </p>
-                <p class="parrafo">- Discusión de la visión del proyecto: Se definió qué es lo que se quiere lograr con el
+                <p class="parrafo"><i class="fa-solid fa-check check_verde"></i> Discusión de la visión del proyecto: Se definió qué es lo que se quiere lograr con el
                     sistema web de gestión de datos, quiénes serán los usuarios finales, cómo se
                     beneficiarán y cómo se espera que el sistema contribuya al éxito de la veterinaria.
                     </p>
-                    <p class="parrafo">- Definición de los objetivos: Se definieron los objetivos del proyecto, alineados con la
+                    <p class="parrafo"><i class="fa-solid fa-check check_verde"></i> Definición de los objetivos: Se definieron los objetivos del proyecto, alineados con la
                         visión del proyecto y ayudar a avanzar hacia ella.
                         </p>
-            <p class="parrafo">- Discusión del alcance: Se definieron los límites del proyecto, los entregables
+            <p class="parrafo"><i class="fa-solid fa-check check_verde"></i> Discusión del alcance: Se definieron los límites del proyecto, los entregables
                 específicos y los requisitos del sistema.</p>
             <p class="subtitulo">Análisis FODA</p>
             <div class="contenedor_imagen"><img src="images/Analisis FODA.png" alt="" class="contenedor_informacion_img"></div>
             <p class="titulo">Salidas</p>
             <p class="subtitulo">Product Owner identificado</p>
-            <div class="contenedor_imagen"><img src="images/ProductOwner.jpeg" alt="" class="contenedor_informacion_img_perfil"></div>
-            <p class="parrafo">En este proyecto, el Product Owner identificado es: Serna Malca, Luis Alejandro.
-                Quien representa la voz del cliente, y está a cargo de la articulación de requerimientos por
+            <div class="contenedor_imagen"><img src="images/ScrumMaster.jpeg" alt="" class="contenedor_informacion_img_perfil"></div>
+            <p class="parrafo">En este proyecto, el Product Owner identificado es: Vera Rodriguez José Andrés,
+                 quien representa la voz del cliente, y está a cargo de la articulación de requerimientos por
                 parte de los clientes y de mantener la justificación del negocio para el proyecto.
                 </p>
             <p class="subtitulo">Declaración de la visión del proyecto</p>
@@ -144,21 +181,23 @@ y deseamos dar una atención médica que satisfaga las expectativas de nuestros 
         const barra_menu = document.querySelector('.barra_menu');
         const seccion_principal = document.querySelector('.seccion_principal');
 
-        barra_menu.addEventListener('click',(e)=>{
-            e.preventDefault();
-            if(seccion_principal.classList.contains('menu_inactivo')){
-                //esta activo el menu, desactivarlo
-                seccion_principal.classList.remove('menu_inactivo');
-                seccion_principal.classList.add('menu_activo');
-                //cambiar a X el icono
-                barra_menu.innerHTML = '<i class="fa-solid fa-x icono_menu"></i>'
-                return;
-            }
-            seccion_principal.classList.add('menu_inactivo');
-            seccion_principal.classList.remove('menu_activo');
-            barra_menu.innerHTML = '<i class="fa-solid fa-bars icono_menu"></i>'
+        const navbar = document.querySelector('.navbar');
 
-        })
+barra_menu.addEventListener('click',(e)=>{
+    e.preventDefault();
+    if(navbar.classList.contains('menu_oculto')){
+        //esta activo el menu, desactivarlo
+        navbar.classList.remove('menu_oculto');
+        // navbar.classList.add('menu_activo');
+        //cambiar a X el icono
+        barra_menu.innerHTML = '<i class="fa-solid fa-bars icono_menu"></i>'
+        return;
+    }
+    navbar.classList.add('menu_oculto');
+    // navbar.classList.remove('menu_activo');
+    barra_menu.innerHTML = '<i class="fa-solid fa-bars icono_menu"></i>'
+
+})
 
         window.addEventListener('scroll',function(){
             const scrollY = window.scrollY;

@@ -6,291 +6,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="logo_pata.png">
     <link rel="stylesheet" href="fontawesome/css/all.css">
+    <link rel="stylesheet" href="blog.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orejotas y colitas</title>
 </head>
 
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-            font-family: 'Rubik', sans-serif;
-        }
-
-        :root{
-            --color-primario: #131417;
-            --color-secundario: #252830;
-            --color-bg-claro:#e6e6e6;
-        }
-
-        body::-webkit-scrollbar{
-            background-color: white;
-            width: 7px;
-        }
-
-        body::-webkit-scrollbar-thumb{
-            background-color: #4070F4;
-            border-radius: 5px;
-        }
-
-        body{
-            background-color: var(--color-bg-claro);
-        }
-
-        .header{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            background-color: var(--color-primario);
-            color: white;
-            padding: 20px 40px;
-            transition: all 200ms;
-            
-        }
-
-        .header_enlaces{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0 30px;
-        }
-
-        .header_titulo{
-            text-transform: uppercase;
-            font-size: 30px;
-            font-weight: 700;
-        }
-
-        .header_enlace{
-            color: white;
-            font-size: 25px;
-        }
-
-
-        .header_enlace_modoOscuro{
-            color: rgb(255, 227, 86);
-            
-        }
-
-        .contenedor_cards{
-            display: grid;
-            grid-template-columns: repeat(3,1fr);
-            margin: 0 auto;
-            justify-items: center;
-            width: 70%;
-            gap: 50px;
-            justify-content: center;
-           
-            align-content: center;
-          
-        }
-        .card{
-           
-            width: 300px;   
-            padding: 20px 15px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            gap: 15px 0;
-            background-color: white;
-            color: white;
-            border-radius: 10px;
-            line-height: 23px;
-            transition: all 600ms;
-            height: 200px;
-            box-shadow: 2px 1px 23px 0px rgba(0,0,0,0.75);
--webkit-box-shadow: 2px 1px 23px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 2px 1px 23px 0px rgba(0,0,0,0.75);
-        }
-
-        .card:hover{
-            transform: scale(1.04);
-        }
-
-
-        .card_imagen{
-            width: 100%;
-        }
-
-        .card_titulo{
-            font-weight: 700;
-            font-size: 25px;
-            text-align: center;
-            color: black;
-        }
-
-        .card_descripcion{
-            text-align: justify;
-        }
-
-        .card_fecha{
-            text-align: center;
-            color: rgb(145, 145, 145);
-        }
-
-        .card_boton{
-            padding: 15px 0;
-            font-weight: 600;
-            font-size: 15px;
-            text-transform: uppercase;
-            color: white;
-            background-color: transparent;
-            border: solid 2px rgb(0, 0, 0);
-
-            transition: all 400ms;
-            color: black;
-        }
-
-        .card_boton:hover{
-            background-color: #4070F4;
-            color: white;
-            cursor: pointer;
-        }
-
-        .footer{
-            background-color: var(--color-primario);
-
-            color: white;
-            text-align: center;
-            margin-top: 100px;
-            font-weight: 400;
-            padding: 20px 0;
-            font-size: 19px;
-            box-sizing: border-box;
-        }
-
-        .navegacion_scroll{
-            width: 100%;
-            position: fixed;
-            top: 0;
-            background: rgba(0, 0, 0, .5);
-            backdrop-filter: blur(20px);
-            box-sizing: border-box;
-            z-index: 10;
-        }
-
-        .titulo_blog{
-            color: black;
-            text-align: center;
-            margin: 80px 0;
-            font-size: 45px;
-        }
-
-        .seccion_principal a{
-            color: white;
-            text-decoration: none;
-            width: 100%;
-            box-sizing: border-box;
-            height: 100%;
-            text-align: center;
-            padding: 20px 30px;
-            text-transform: uppercase;
-            font-size: 15px;
-            font-weight: 600;
-            transition: all 500ms;  
-        }
-
-        .seccion_principal a:hover{
-            background-color: #131417; 
-        }
-
-        .seccion_principal{
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            box-sizing: border-box;
-            border: #131417 solid 1px;
-            background-color: #252830;  
-        }
-
-        .seccion_activa{
-            background-color: var(--color-primario);
-           
-        }
-
-        .barra_menu{
-            display: none;
-        }
-
-        .icono_menu{
-            color: white;
-            font-size: 25px;
-        }
-
-
-
-        .menu_activo{
-            position: fixed;
-            left: 0;
-            right: 0;
-            top: 76px;
-            z-index: 10;
-            animation: slideLeft 500ms ease forwards;
-            opacity: 0;
-
-        }
-
-        @keyframes slideLeft{
-            0%{
-                opacity: 0;
-                transform: translateX(30px);
-            }
-
-            100%{
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-        @media (max-width: 1254px) {
-
-            .contenedor_cards{
-                grid-template-columns: repeat(2,1fr);
-            }
-
-        }
-
-        @media (max-width: 731px) {
-            .seccion_principal{
-                flex-direction: column;
-                box-sizing: border-box;
-            }
-
-            .menu_inactivo{
-            display: none;
-        }
-
-
-            .header{
-                padding: 20px 30px;
-                width: 100%;
-                box-sizing: border-box;
-            }
-
-            .barra_secciones{
-                display: none;
-            }
-
-            .contenedor_cards{
-                grid-template-columns: repeat(1,1fr);
-            }
-
-            .barra_menu{
-                display: flex;
-                text-decoration: none;
-            }
-
-            .footer{
-                font-size: 17px;
-            }
-
-            
-
-
-        }
-
-    </style>
 <body>
     <header class="header ">
         <div>
@@ -302,12 +22,49 @@
         </div>
     </header>
 
-    <div class="seccion_principal menu_inactivo">
-        <a href="blog.html" class="seccion_activa">Inicio</a>
-        <a href="sprint1.html">Sprint I</a>
-        <a href="">Sprint II</a>
-        <a href="">Sprint III</a>
-    </div>
+    <nav class="navbar menu_oculto">
+        <ul>
+            <li class="seccion_activa"><a href="blog.html" >Inicio</a></li>
+            <li><a href="#">Sprint I</a>
+                <ul>
+                    <li><a href="#">Planificación y estimación</a>
+                        <ul>
+                            <li><a href="sprint1/planificacion-y-estimacion/crear-historias-usuario.html">Crear historias de usuario</a></li>
+                            <li><a href="sprint1/planificacion-y-estimacion/estimar-historias-usuario.html">Estimar historias de usuario</a></li>
+                            <li><a href="sprint1/planificacion-y-estimacion/comprometer-historias-usuario.html">Comprometer historias de usuario</a></li>
+                            <li><a href="sprint1/planificacion-y-estimacion/identificar-tareas.html">Identificar tareas</a></li>
+                            <li><a href="sprint1/planificacion-y-estimacion/estimar-tareas.html">Estimar tareas</a></li>
+                            <li><a href="sprint1/planificacion-y-estimacion/crear-sprint-del-backlog.html">Crear sprint del backlog</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Implementación</a>
+                        <ul>
+                            <li><a href="sprint1/implementacion/crear-entregables.html">Crear entregables</a></li>
+                            <li><a href="sprint1/implementacion/refinamiento-del-backlog-priorizado.html">Refinamiento del backlog priorizado</a></li>
+                            <li><a href="sprint1/implementacion/realizar-daily-standup.html">Realizar Daily Standup</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a href="#">Revisión y retrospectiva</a>
+                        <ul>
+                            <li><a href="sprint1/revision-y-retrospectiva/demostrar-y-validar-el-sprint.html">Demostrar y validar el sprint</a></li>
+                            <li><a href="sprint1/revision-y-retrospectiva/retrospectiva-del-sprint.html">Retrospectiva del sprint</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a href="#">Lanzamiento</a>
+                        <ul>
+                            <li><a href="sprint1/lanzamiento/envio-de-entregables.html">Envio de entregables</a></li>
+                            <li><a href="sprint1/lanzamiento/retrospectiva-del-proyecto.html">Retrospectiva del proyecto</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="">Sprint II</a></li>
+            <li><a href="">Sprint III</a></li>
+        </ul>
+    </nav>
 
     <h1 class="titulo_blog">Procesos de la fase de inicio</h1>
 
@@ -372,19 +129,20 @@
         const header = document.querySelector('.header');
         const barra_menu = document.querySelector('.barra_menu');
         const seccion_principal = document.querySelector('.seccion_principal');
+        const navbar = document.querySelector('.navbar');
 
         barra_menu.addEventListener('click',(e)=>{
             e.preventDefault();
-            if(seccion_principal.classList.contains('menu_inactivo')){
+            if(navbar.classList.contains('menu_oculto')){
                 //esta activo el menu, desactivarlo
-                seccion_principal.classList.remove('menu_inactivo');
-                seccion_principal.classList.add('menu_activo');
+                navbar.classList.remove('menu_oculto');
+                // navbar.classList.add('menu_activo');
                 //cambiar a X el icono
                 barra_menu.innerHTML = '<i class="fa-solid fa-x icono_menu"></i>'
                 return;
             }
-            seccion_principal.classList.add('menu_inactivo');
-            seccion_principal.classList.remove('menu_activo');
+            navbar.classList.add('menu_oculto');
+            // navbar.classList.remove('menu_activo');
             barra_menu.innerHTML = '<i class="fa-solid fa-bars icono_menu"></i>'
 
         })

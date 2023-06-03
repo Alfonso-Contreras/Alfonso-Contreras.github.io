@@ -3,18 +3,20 @@ const header = document.querySelector('.header');
 const barra_menu = document.querySelector('.barra_menu');
 const seccion_principal = document.querySelector('.seccion_principal');
 
+const navbar = document.querySelector('.navbar');
+
 barra_menu.addEventListener('click',(e)=>{
     e.preventDefault();
-    if(seccion_principal.classList.contains('menu_inactivo')){
+    if(navbar.classList.contains('menu_oculto')){
         //esta activo el menu, desactivarlo
-        seccion_principal.classList.remove('menu_inactivo');
-        seccion_principal.classList.add('menu_activo');
+        navbar.classList.remove('menu_oculto');
+        // navbar.classList.add('menu_activo');
         //cambiar a X el icono
-        barra_menu.innerHTML = '<i class="fa-solid fa-x icono_menu"></i>'
+        barra_menu.innerHTML = '<i class="fa-solid fa-bars icono_menu"></i>'
         return;
     }
-    seccion_principal.classList.add('menu_inactivo');
-    seccion_principal.classList.remove('menu_activo');
+    navbar.classList.add('menu_oculto');
+    // navbar.classList.remove('menu_activo');
     barra_menu.innerHTML = '<i class="fa-solid fa-bars icono_menu"></i>'
 
 })

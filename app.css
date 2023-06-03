@@ -221,6 +221,16 @@ a{
     border-radius: 10px;
     color: white;
 }
+.contenedor_informacion_img_70{
+    width: 70%;
+}
+.check_verde{
+    color: rgb(28, 168, 28);
+}
+
+.seccion_activa{
+    background-color: #131417;
+}
 
 .titulo{
     text-align: center;
@@ -357,7 +367,62 @@ height: 260px;
 }
 
 .url_video:hover{
-    transform: scale(1.08);
+    transform: scale(1.02);
+}
+
+.navbar{
+    width: 100%;
+    background-color: var(--color-secundario);
+}
+
+.navbar ul{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    background-color: #252830;
+}
+
+.navbar ul li{
+    position: relative;
+    float: left;
+    text-align: center;
+    width: 100%;
+
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 20px 50px;
+
+}
+
+.navbar ul li a:hover{
+    background-color: var(--color-primario);
+}
+.navbar ul li ul{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    background-color: #4070F4;
+    display: none;
+    width: 400px;
+    box-sizing: border-box;
+    z-index: 100;
+}
+
+
+.navbar ul li ul li ul{
+    left: 400px;
+    top: 0;
+}
+.navbar ul li:focus-within > ul,
+.navbar ul li:hover > ul{
+    display: flex;
 }
 
 @keyframes slideLeft{
@@ -379,6 +444,25 @@ height: 260px;
 }
 
 @media (max-width: 680px) {
+
+    .menu_oculto{
+        display: none;
+    }
+
+    .navbar ul{
+        flex-direction: column;
+    }
+
+    .navbar ul li ul{
+        position: relative;
+        width: 100%;
+    }
+
+    .navbar ul li ul li ul{
+        left: 0;
+        background-color: rgb(31, 105, 209);
+    }
+
 
     .menu_inactivo{
         display: none;

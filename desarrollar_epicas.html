@@ -22,12 +22,49 @@
         </div>
     </header>
 
-    <div class="seccion_principal menu_inactivo">
-        <a href="blog.html">Inicio</a>
-        <a href="">Sprint I</a>
-        <a href="">Sprint II</a>
-        <a href="">Sprint III</a>
-    </div>
+    <nav class="navbar menu_oculto">
+        <ul>
+            <li class="seccion_activa"><a href="blog.html" >Inicio</a></li>
+            <li><a href="#">Sprint I</a>
+                <ul>
+                    <li><a href="#">Planificación y estimación</a>
+                        <ul>
+                            <li><a href="sprint1/planificacion-y-estimacion/crear-historias-usuario.html">Crear historias de usuario</a></li>
+                            <li><a href="sprint1/planificacion-y-estimacion/estimar-historias-usuario.html">Estimar historias de usuario</a></li>
+                            <li><a href="sprint1/planificacion-y-estimacion/comprometer-historias-usuario.html">Comprometer historias de usuario</a></li>
+                            <li><a href="sprint1/planificacion-y-estimacion/identificar-tareas.html">Identificar tareas</a></li>
+                            <li><a href="sprint1/planificacion-y-estimacion/estimar-tareas.html">Estimar tareas</a></li>
+                            <li><a href="sprint1/planificacion-y-estimacion/crear-sprint-del-backlog.html">Crear sprint del backlog</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Implementación</a>
+                        <ul>
+                            <li><a href="sprint1/implementacion/crear-entregables.html">Crear entregables</a></li>
+                            <li><a href="sprint1/implementacion/refinamiento-del-backlog-priorizado.html">Refinamiento del backlog priorizado</a></li>
+                            <li><a href="sprint1/implementacion/realizar-daily-standup.html">Realizar Daily Standup</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a href="#">Revisión y retrospectiva</a>
+                        <ul>
+                            <li><a href="sprint1/revision-y-retrospectiva/demostrar-y-validar-el-sprint.html">Demostrar y validar el sprint</a></li>
+                            <li><a href="sprint1/revision-y-retrospectiva/retrospectiva-del-sprint.html">Retrospectiva del sprint</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a href="#">Lanzamiento</a>
+                        <ul>
+                            <li><a href="sprint1/lanzamiento/envio-de-entregables.html">Envio de entregables</a></li>
+                            <li><a href="sprint1/lanzamiento/retrospectiva-del-proyecto.html">Retrospectiva del proyecto</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="">Sprint II</a></li>
+            <li><a href="">Sprint III</a></li>
+        </ul>
+    </nav>
 
     <h1 class="titulo_blog">4. Desarrollar épicas</h1>
 
@@ -52,13 +89,13 @@
 
             <div class="card_equipoScrum">
                 <div class="contenedor_imagen_Equipo"><img src="images/ProductOwner.jpeg" alt="ww" class="contenedor_informacion_img_equipoSrum"></div>
-                <p class="nombre_integrante_scrum">Serna Malca Luis - Product Owner</p>
+                <p class="nombre_integrante_scrum">Serna Malca Luis - Scrum Master</p>
             </div>
 
 
             <div class="card_equipoScrum">
                 <div class="contenedor_imagen_Equipo"><img src="images/ScrumMaster.jpeg" alt="ww" class="contenedor_informacion_img_equipoSrum"></div>
-                <p class="nombre_integrante_scrum">Vera Rodriguez José - Scrum Master</p>
+                <p class="nombre_integrante_scrum">Vera Rodriguez José - Product Owner</p>
             </div>
 
             <div class="card_equipoScrum">
@@ -70,23 +107,23 @@
 
             <div class="card_equipoScrum">
                 <div class="contenedor_imagen_Equipo"><img src="1923010051.jpg" alt="" class="contenedor_informacion_img_equipoSrum"></div>
-                <p class="nombre_integrante_scrum">Contreras Gómez Paulino - Developer</p>
+                <p class="nombre_integrante_scrum">Contreras Gómez Paulino - Desarrollador</p>
             </div>
 
             <div class="card_equipoScrum">
                 <div class="contenedor_imagen_Equipo"><img src="images/desarrollador_motta.jpg" alt="" class="contenedor_informacion_img_equipoSrum"></div>
-                <p class="nombre_integrante_scrum">Motta Mendoza Miguel - Developer</p>
+                <p class="nombre_integrante_scrum">Motta Mendoza Miguel - Desarrollador</p>
             </div>
 
 
             <div class="card_equipoScrum">
                 <div class="contenedor_imagen_Equipo"><img src="images/desarrollador_edson.jpg" alt="" class="contenedor_informacion_img_equipoSrum"></div>
-                <p class="nombre_integrante_scrum">Alva Chanta Edson - Developer</p>
+                <p class="nombre_integrante_scrum">Alva Chanta Edson - Desarrollador</p>
             </div>
 
 
         </div>
-
+        <br>
         <p class="subtitulo">Declaración de la visión del proyecto</p>
         <p class="parrafo">Desarrollar un sistema web que ofrezca una solución integral y fácil de usar que permita a
             los veterinarios y al personal de la clínica acceder a los datos de los pacientes, llevar un
@@ -123,34 +160,34 @@
 
         <p class="subtitulo">Épicas</p>
 
-        <p class="parrafo">Registro de clientes y mascotas: El sistema debe permitir registrar a los clientes y sus mascotas en la base de datos del sistema web, incluyendo información como nombre, dirección, número de teléfono y correo del cliente, y nombre, especie, raza y edad de la mascota.
+        <p class="parrafo"><i class="fa-solid fa-check check_verde"></i> Registro de clientes y mascotas: El sistema debe permitir registrar a los clientes y sus mascotas en la base de datos del sistema web, incluyendo información como nombre, dirección, número de teléfono y correo del cliente, y nombre, especie, raza y edad de la mascota.
         </p>
-        <p class="parrafo">Registro de historiales médicos: El sistema debe registrar los historiales médicos de las mascotas en la base de datos del sistema web, incluyendo información como síntomas, el diagnóstico, el tratamiento y las notas del veterinario.</p>
+        <p class="parrafo"><i class="fa-solid fa-check check_verde"></i> Registro de historiales médicos: El sistema debe registrar los historiales médicos de las mascotas en la base de datos del sistema web, incluyendo información como síntomas, el diagnóstico, el tratamiento y las notas del veterinario.</p>
 
-        <p class="parrafo">Registro de citas y programaciones: El sistema debe incluir la creación de un calendario en línea para poder programar citas para las mascotas.
+        <p class="parrafo"><i class="fa-solid fa-check check_verde"></i> Registro de citas y programaciones: El sistema debe incluir la creación de un calendario en línea para poder programar citas para las mascotas.
 </p>
 
-        <p class="parrafo">Gestión de datos: El sistema debe incluir la creación de una interfaz de gestión de datos para que se pueda ver y editar los registros en la base de datos del sistema web, además de permitir la realización de copias de seguridad.</p>
+        <p class="parrafo"><i class="fa-solid fa-check check_verde"></i> Gestión de datos: El sistema debe incluir la creación de una interfaz de gestión de datos para que se pueda ver y editar los registros en la base de datos del sistema web, además de permitir la realización de copias de seguridad.</p>
 
-        <p class="parrafo">Generación de reportes: El sistema debe incluir la creación de una funcionalidad para generar informes y estadísticas sobre la base de datos del sistema web.</p>
+        <p class="parrafo"><i class="fa-solid fa-check check_verde"></i> Generación de reportes: El sistema debe incluir la creación de una funcionalidad para generar informes y estadísticas sobre la base de datos del sistema web.</p>
 
         <p class="subtitulo">Prototipos</p>
         <p class="parrafo">Veterinarios y personal médico:
         </p>
-        <p class="parrafo">- Juan, un veterinario experimentado que necesita acceder rápidamente a los historiales
+        <p class="parrafo"><i class="fa-solid fa-check check_verde"></i> Juan, un veterinario experimentado que necesita acceder rápidamente a los historiales
             médicos de los pacientes y registrar los tratamientos recetados.
             </p>
-        <p class="parrafo">- Ana, una veterinaria que necesita programar citas y administrar el calendario de los
+        <p class="parrafo"><i class="fa-solid fa-check check_verde"></i> Ana, una veterinaria que necesita programar citas y administrar el calendario de los
             veterinarios.</p>
            
         
                 <p class="parrafo">Personal administrativo:
                 </p>
 
-                <p class="parrafo">- Gabriel, el dueño de la veterinaria, necesita generar informes sobre los datos de los
+                <p class="parrafo"><i class="fa-solid fa-check check_verde"></i> Gabriel, el dueño de la veterinaria, necesita generar informes sobre los datos de los
                     clientes de la clínica</p>
 
-                    <p class="parrafo">- Pedro, el recepcionista de la clínica, que necesita programar citas y registrar los
+                    <p class="parrafo"><i class="fa-solid fa-check check_verde"></i> Pedro, el recepcionista de la clínica, que necesita programar citas y registrar los
                         detalles del paciente en el sistema.</p>
 
         <p class="subtitulo">Riesgos identificados</p>
