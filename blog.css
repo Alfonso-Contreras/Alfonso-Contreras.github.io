@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Rubik', sans-serif;
+    font-family: 'Ysabeau Office', sans-serif;
 }
 
 :root{
@@ -31,7 +32,7 @@ body{
     align-items: center;
     background-color: var(--color-primario);
     color: white;
-    padding: 20px 40px;
+    padding: 15px 40px;
     transition: all 200ms;
     
 }
@@ -243,7 +244,7 @@ body{
     text-decoration: none;
     color: white;
     display: block;
-    padding: 20px 50px;
+    padding: 15px 50px;
 
 }
 
@@ -257,14 +258,14 @@ body{
     left: 0;
     background-color: #4070F4;
     display: none;
-    width: 400px;
+    width: 250px;
     box-sizing: border-box;
     z-index: 100;
 }
 
 
 .navbar ul li ul li ul{
-    left: 400px;
+    left: 250px;
     top: 0;
 }
 .navbar ul li:focus-within > ul,
