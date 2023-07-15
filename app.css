@@ -421,6 +421,16 @@ height: 260px;
     left: 250px;
     top: 0;
 }
+
+.navbar ul li ul li .izquierda{
+    left: -250px;
+    top: 0;
+}
+
+.border{
+    border: solid 1px black;
+}
+
 .navbar ul li:focus-within > ul,
 .navbar ul li:hover > ul{
     display: flex;
